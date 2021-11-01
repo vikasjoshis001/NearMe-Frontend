@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            var navList = document.getElementById("nav-lists");
+function Show() {
+navList.classList.add("_Menus-show");
+}
+
+function Hide(){
+navList.classList.remove("_Menus-show");
+}
+
+$(document).ready(function() {
+  var front = document.getElementsByClassName("front");
+  var back = document.getElementsByClassName("back");
+
+  var highest = 0;
+  var absoluteSide = "";
+
+  for (var i = 0; i < front.length; i++) {
+    if (front[i].offsetHeight > back[i].offsetHeight) {
+      if (front[i].offsetHeight > highest) {
+        highest = front[i].offsetHeight;
+        absoluteSide = ".front";
+      }
+    } else if (back[i].offsetHeight > highest) {
+      highest = back[i].offsetHeight;
+      absoluteSide = ".back";
+    }
+  }
+  $(".front").css("height", highest);
+  $(".back").css("height", highest);
+  $(absoluteSide).css("position", "absolute");
+});
+
+// object-fit polyfill run
+objectFitImages();
+
+/* init Jarallax */
+jarallax(document.querySelectorAll('.jarallax'));
+
+jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+    keepImg: true,
+});
+        </script>
+    </head>
+    <body>
+        <!-- Visit https://codepen.io/nicolaskadis/full/brQEOd/ for the latest, no js version! -->
+        <div class="container1">
+            <div class="row text-center">
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block" style="background-color:
+                            rgb(255, 255, 255);">
+                            <!-- To add FontAwesome Icons use Unicode characters and to set size use font-size instead of fa-*x because when calculating the height (see js), the size of the icon is not calculated if using classes -->
+                            <img src="assets/img/hostel_logo.webp" width="300"
+                                height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get" action="datatype/hostel.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block" style="background-color:
+                            rgb(255, 255, 255);">
+                            <img src="assets/img/mess_logo.jpg" width="300"
+                                height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get" action="datatype/mess.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block" style="background-color:
+                            rgb(255, 255, 255);">
+                            <img src="assets/img/stationary_logo.jpg"
+                                width="300" height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get"
+                                action="datatype/stationary.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block" style="background-color:
+                            rgb(255, 255, 255);">
+                            <img src="assets/img/cofee_logo.jpg" width="300"
+                                height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get" action="datatype/coffee.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block">
+                            <img src="assets/img/sport_logo.jpg" width="300"
+                                height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get" action="datatype/sport.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-container1">
+                    <div class="card card-flip">
+                        <div class="front card-block">
+                            <img src="assets/img/glocery_logo.webp" width="300"
+                                height="300">
+                        </div>
+                        <div class="back card-block">
+                            <h5 style="color: rgb(250, 246, 6);">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h5>
+                            <form method="get" action="datatype/glocery.html">
+                                <button class="btn btn-info"><i class="fa
+                                        fa-folder-open"></i>| More</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Image Parallax -->
+        <div class="parallax">
+            <div class="parallax-inner">
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="content">
+                <div class="top">
+                    <div class="logo-details">
+                        <span class="logo_name">Near Me</span>
+                    </div>
+                    <div class="media-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="link-boxes">
+                    <ul class="box">
+                        <li class="link_name">Links</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="#">Get Started</a></li>
+
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Services</li>
+                        <li><a href="#">App Design</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">Banner Design</a></li>
+
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Other services</li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">Prints</a></li>
+                        <li><a href="#">Social Media</a></li>
+
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name">Contact</li>
+                        <li><a href="#">+91 1111100000</a></li>
+                        <li><a href="#">+91 1111100000</a></li>
+                        <li><a href="#">contact@Nearme.com</a></li>
+
+
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+            <div class="bottom-details">
+                <div class="bottom_text">
+                    <span class="copyright_text">Copyright © 2021 <a href="#">Near
+                            Me.</a></span>
+                    <span class="policy_terms">
+                        <a href="#">Privacy policy</a>
+
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </body>
+</html>

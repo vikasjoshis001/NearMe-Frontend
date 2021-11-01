@@ -1,0 +1,16 @@
+step 1) Install npm
+Download from https://nodejs.org/en/download/
+verify using...
+npm -v
+
+step 2) Install Angular Requirements
+	a) npm install (for package.json)
+        b) remove package.json
+        c) npm clean cache --force
+        d) npm cache verified
+        e) npm install @angular/cli
+        f) npm install rxjs@6.6.6
+        g) npm install
+        h) npm install --save @angular/material @angular/cdk
+        i) npm install --save-dev @angular-devkit/build-angular
+        j) ng serve
