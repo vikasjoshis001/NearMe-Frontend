@@ -1,0 +1,25 @@
+.navbar-nav{
+    margin-left: 80px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 19px;
+    text-transform: uppercase;
+    display: block;
+    height: 70px;
+    line-height: 60px;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  .navbar ul li a:hover {
+    color: #ffffff;
+    background-color: rgb(3, 59, 122);
+    height: 70px;
+    line-height: 60px;
+  }
+  .btn{
+border-radius: 50px;
+
+  }
