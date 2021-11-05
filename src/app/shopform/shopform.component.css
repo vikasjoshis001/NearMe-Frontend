@@ -1,0 +1,146 @@
+/* Form */
+input.ng-invalid {
+  border-left: 5px solid red;
+}
+input.ng-valid {
+  border-left: 5px solid green;
+}
+
+body {
+  /* background-image: url("src/assets/Images/finance5.jpg"); */
+}
+.intro {
+  height: 400vh;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+
+#customerEditForm {
+  padding: 1em;
+  width: 60%;
+  height: 650px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  top: auto;
+  background-color: grey;
+}
+
+#transactionForm {
+  padding: 1em;
+  width: 60%;
+  height: 400px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  top: auto;
+  background-color: grey;
+}
+
+.shopForm{
+  padding-top: 100px;
+  padding-bottom: 300px;
+
+}
+
+#addOwnerform {
+    padding: 1em;
+    width: 70%;
+    height: 700px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding-top: 20px;
+    background-color: rgb(3, 59, 122);;
+  }
+
+#addShopform {
+  padding: 1em;
+  width: 70%;
+  height: 700px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding-top: 20px;
+  background-color: rgb(3, 59, 122);;
+}
+
+.left{
+    width:50%;
+}
+
+.right{
+    position:relative;
+    top: 0%;
+    float:right;
+    width:50%;
+}
+form label {
+  color: aqua;
+}
+
+#searchBar {
+  position: relative;
+  top: 70px;
+  width: 600px;
+}
+
+.pacificofont {
+  font-family: pacifico;
+  font-size: 50px;
+}
+
+#title {
+  color: white;
+  margin-left: 400px;
+}
+
+/* Table */
+table.table td a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  min-width: 24px;
+}
+table.table td a.add {
+  color: #27c46b;
+}
+table.table td a.edit {
+  color: #ffc107;
+}
+table.table td a.delete {
+  color: #e34724;
+}
+table.table td i {
+  font-size: 19px;
+}
+table.table td a.add i {
+  font-size: 24px;
+  margin-right: -1px;
+  position: relative;
+  top: 3px;
+}
+/* Table */
+
+
+
+/* Delete Form */
+.fancy {
+  padding: 1em;
+  width: 50%;
+  height: 280px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 25px;
+  top: auto;
+  background-color: #fcfcfa;
+}
+/* Delete Form */

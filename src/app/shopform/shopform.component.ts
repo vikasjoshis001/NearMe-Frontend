@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopformComponent implements OnInit {
 
+  shopform = true;
+  ownerform = false;
+  val;
   constructor() { }
+
+  addShop(data){
+    this.val = data;
+    this.shopform = false;
+    this.ownerform = true;
+  }
+
+  addOwner(data){
+    this.val = data;
+    this.shopform = true;
+    this.ownerform = false;
+  }
 
   ngOnInit(): void {
   }
