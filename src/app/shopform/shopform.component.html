@@ -1,9 +1,17 @@
+<div class="container">
+    <ul class="progressbar">
+        <li class={{step1}}>Shop Details</li>
+        <li class={{step2}}>Owner Details</li>
+        <li class={{step3}}>Policies</li>
+</ul>
+</div>
+
 <div *ngIf="shopform === true" class="shopForm">
 
-    <h1>Shop Details</h1>
+    <!-- <h1>Shop Details</h1> -->
     <form id=addShopform #addShopform="ngForm"
-    (ngSubmit)="addShop(addShopform)">
-    <div class="container">
+        (ngSubmit)="addShop(addShopform)">
+        <div class="container">
 
 
             <!-- Customer Name -->
@@ -22,8 +30,8 @@
             <!-- Customer Name -->
 
             <!-- Customer Contact -->
-             <!-- Customer Contact -->
-             <div class="form-group">
+            <!-- Customer Contact -->
+            <div class="form-group">
                 <label id="input_label_1"
                     for="shop_contact">Mobile Number</label>
                 <input #shop_contact="ngModel"
@@ -73,53 +81,45 @@
                 class="btn
                 btn-danger">Next</button>
             <!-- Submit Button -->
-            </div>
-        </form>
+        </div>
+    </form>
 </div>
 
 <!-- ########################################################################################################################### -->
-
 <div *ngIf="ownerform === true" class="shopForm">
     <form id=addOwnerform #addOwnerform="ngForm"
-    (ngSubmit)="addOwner(addOwnerform)">
-    <div class="container">
+        (ngSubmit)="addOwner(addOwnerform)">
+        <div class="container">
 
 
             <!-- Customer Name -->
             <div class="form-group">
                 <label id="input_label"
-                    for="shop_name">Owner Name</label>
-                <input #shop_name="ngModel"
+                    for="owner_name">Owner Name</label>
+                <input #owner_name="ngModel"
                     required
                     type="text" class="form-control"
                     placeholder="Enter Name"
-                    id="shop_name"
-                    aria-describedby="shop_name"
+                    id="owner_name"
+                    aria-describedby="owner_name"
                     ngModel
-                    name="shop_name">
+                    name="owner_name">
             </div>
             <!-- Customer Name -->
 
             <!-- Customer Contact -->
-             <!-- Customer Contact -->
-             <div class="form-group">
+            <!-- Customer Contact -->
+            <div class="form-group">
                 <label id="input_label_1"
-                    for="shop_contact">Owner  Number</label>
-                <input #shop_contact="ngModel"
+                    for="owner_contact">Owner Number</label>
+                <input #owner_contact="ngModel"
                     pattern=\d\d\d\d\d\d\d\d\d\d
                     type="text" class="form-control"
-                    id="shop_contact"
-                    aria-describedby="shop_contact"
+                    id="owner_contact"
+                    aria-describedby="owner_contact"
                     placeholder="Enter Mobile Number"
                     ngModel
-                    name="shop_contact">
-                <span id="input_label"
-                    *ngIf="shop_contact.invalid &&
-                    shop_contact.touched"
-                    style="color:red"><b>**Mobile Number
-                        Should
-                        be
-                        10 digits</b></span>
+                    name="owner_contact">
             </div>
             <!-- Customer Contact -->
             <!-- Customer Contact -->
@@ -127,14 +127,14 @@
             <!-- Customer Email -->
             <div class="form-group">
                 <label id="input_label_1"
-                    for="shop_email">Mobile Number</label>
-                <input #shop_email="ngModel"
+                    for="owner_email">Mobile Number</label>
+                <input #owner_email="ngModel"
                     type="email" class="form-control"
-                    id="shop_email"
-                    aria-describedby="shop_email"
+                    id="owner_email"
+                    aria-describedby="owner_email"
                     placeholder="Enter Mobile Number"
                     ngModel
-                    name="shop_email">
+                    name="owner_email">
             </div>
             <!-- Customer Email -->
 
@@ -143,6 +143,6 @@
                 class="btn
                 btn-danger">Next</button>
             <!-- Submit Button -->
-            </div>
-        </form>
+        </div>
+    </form>
 </div>
