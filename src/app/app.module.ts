@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { ShopformComponent } from './shopform/shopform.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
+import { ExploreComponent } from './explore/explore.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { ContactComponent } from './contact/contact.component';
     ShopformComponent,
     NavbarComponent,
     ContactComponent,
+    ExploreComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,8 @@ import { ContactComponent } from './contact/contact.component';
     ReactiveFormsModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
-    FormsModule,
-    
+    FormsModule,    
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

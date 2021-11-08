@@ -5,17 +5,17 @@
                 <li class={{step1}}>Shop Details</li>
                 <li class={{step2}}>Owner Details</li>
                 <li class={{step3}}>Policies</li>
-        </ul>
+            </ul>
         </div>
-        
+
         <div *ngIf="shopform === true" class="shopForm">
-        
+
             <!-- <h1>Shop Details</h1> -->
             <form id=addShopform #addShopform="ngForm"
                 (ngSubmit)="addShop(addShopform)">
                 <div class="container">
-        
-        
+
+
                     <!-- Customer Name -->
                     <div class="form-group">
                         <label id="input_label"
@@ -30,8 +30,8 @@
                             name="shop_name">
                     </div>
                     <!-- Customer Name -->
-        
-                    
+
+
                     <!-- Customer Contact -->
                     <div class="form-group">
                         <label id="input_label_1"
@@ -53,26 +53,29 @@
                                 10 digits</b></span>
                     </div>
                     <!-- Customer Contact -->
-                    
-                    
-        
+
+
+
                     <!-- Customer Email -->
                     <div class="form-group">
-                        <label for ="shop_email">Email:</label>
-                          <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
-                          id="shop_email"name="shop_email" ngModel #emailref="ngModel">
-                          <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="alert alert-danger">
-                           <div [hidden]="!emailref.errors?.pattern">
-                             Invalid pattern
-                           </div> 
-                          </div> 
+                        <label for="shop_email">Email:</label>
+                        <input type="text" class="form-control"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                            id="shop_email" name="shop_email" ngModel
+                            #emailref="ngModel">
+                        <div *ngIf="emailref.errors &&(emailref.touched ||
+                            emailref.dirty)" class="alert alert-danger">
+                            <div [hidden]="!emailref.errors?.pattern">
+                                Invalid pattern
+                            </div>
+                        </div>
                     </div>
                     <!-- Customer Email -->
 
                     <!-- Customer address -->
                     <div class="form-group">
                         <label id="input_labe_l"
-                            for="shop_adress">Address:</label>
+                            for="shop_address">Address:</label>
                         <input #shop_image="ngModel"
                             required
                             type="text" class="form-control"
@@ -83,18 +86,24 @@
                             name="shop_address">
                     </div>
                     <!-- Customer address -->
-                     <!-- Customer type -->
-        
+                    <!-- Customer type -->
+
                     <div class="form-group">
                         <label id="input_labe_l"
                             for="shop_type">Type:</label>
                         <select #shop_type="ngModel"
                             required
-                             class="form-control"  
+                            class="form-control"
                             id="shop_type"
                             aria-describedby="shop_type"
                             ngModel
-                            name="shop_name"><option></option><option>Hostel</option><option>Mess</option><option>Stationary</option><option>Cofee</option><option>Glocery</option><option>Sport</option></select>
+                            name="shop_type"><option></option><option
+                                value="Hostel">Hostel</option><option
+                                value="Mess">Mess</option><option
+                                value="Stationary">Stationary</option><option
+                                value="Coffee">Coffee</option><option
+                                value="Glocery">Glocery</option><option
+                                value="Sport">Sport</option></select>
                     </div>
                     <!-- Customer type -->
 
@@ -102,33 +111,34 @@
                     <div class="form-group">
                         <label id="input_labe_l"
                             for="shop_description">Description:</label>
-                        <input #shop_image="ngModel"
+                        <textarea #shop_image="ngModel"
                             required
-                            type="text" class="form-control"
+                            type="textarea" class="form-control"
                             placeholder="Description"
                             id="shop_description"
                             aria-describedby="shop_description"
                             ngModel
-                            name="shop_description">
+                            name="shop_description"></textarea>
                     </div>
                     <!-- Customer description -->
 
-                     <!-- Customer image -->
-                     <div class="form-group">
+                    <!-- Customer image -->
+                    <div class="form-group">
                         <label id="input_labe_l"
                             for="shop_image">Upload Image:</label>
                         <input #shop_image="ngModel"
-                            required
                             type="file" class="form-control"
                             placeholder="Upload Image"
                             id="shop_image"
+                            accept="images/*"
                             aria-describedby="shop_image"
                             ngModel
+                            (change)="handleFileInput($event)"
                             name="shop_image">
                     </div>
                     <!-- Customer image -->_
 
-  
+
 
                     <!-- Submit Button -->
                     <button id="submit_button" type="submit"
@@ -138,14 +148,14 @@
                 </div>
             </form>
         </div>
-        
+
         <!-- ########################################################################################################################### -->
         <div *ngIf="ownerform === true" class="shopForm">
             <form id=addOwnerform #addOwnerform="ngForm"
                 (ngSubmit)="addOwner(addOwnerform)">
                 <div class="container">
-        
-        
+
+
                     <!-- Customer Name -->
                     <div class="form-group">
                         <label id="input_label"
@@ -160,7 +170,7 @@
                             name="owner_name">
                     </div>
                     <!-- Customer Name -->
-        
+
                     <!-- Customer Contact -->
                     <!-- Customer Contact -->
                     <div class="form-group">
@@ -177,17 +187,20 @@
                     </div>
                     <!-- Customer Contact -->
                     <!-- Customer Contact -->
-        
+
                     <!-- Customer Email -->
                     <div class="form-group">
-                        <label for ="owne_email">Email:</label>
-                          <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
-                          id="owne_email"name="owne_email" ngModel #emailref="ngModel">
-                          <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="alert alert-danger">
-                           <div [hidden]="!emailref.errors?.pattern">
-                             Invalid pattern
-                           </div> 
-                          </div> 
+                        <label for="owner_email">Email:</label>
+                        <input type="text" class="form-control"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                            id="owner_email" name="owner_email" ngModel
+                            #emailref="ngModel">
+                        <div *ngIf="emailref.errors &&(emailref.touched ||
+                            emailref.dirty)" class="alert alert-danger">
+                            <div [hidden]="!emailref.errors?.pattern">
+                                Invalid pattern
+                            </div>
+                        </div>
                     </div>
                     <!-- Customer Email -->
 
@@ -205,7 +218,7 @@
                             name="owner_address">
                     </div>
                     <!-- Customer address -->
-        
+
                     <!-- Submit Button -->
                     <button id="submit_button" type="submit"
                         class="btn
