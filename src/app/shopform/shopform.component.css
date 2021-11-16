@@ -10,10 +10,8 @@ body {
   padding-top: 10px;
   margin-top: 0%;
   background-image: url('src/assets/img/bg-about.jpg');
-  background-size:  100%  100%;
-  
+  background-size:  100%  100%; 
 }
-
 
 a,
 ul {
@@ -22,6 +20,10 @@ ul {
   margin: 5px 6px; font-size: 20px;
 }
 
+#submit_button{
+  position: relative;
+  bottom: 35px;
+}
 .container{
   padding-top: 0;
   margin-top: 0;
@@ -138,14 +140,15 @@ form label {
 
 #shop_description{
   position: relative;
-  bottom:30px;
+  bottom:40px;
 
 }
 /* Progress bar */
 
 .progressbar {
   counter-reset: step;
-  padding-top: 100px;
+  margin-left: 90px;
+  /* padding-top: 30px; */
 }
 .progressbar li {
   list-style: none;

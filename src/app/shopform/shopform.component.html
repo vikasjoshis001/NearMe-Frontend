@@ -1,270 +1,263 @@
 <div class="intro">
     <html>
-    <body>
-        <div class="container">
-            <ul class="progressbar">
-                <li class={{step1}}>Shop Details</li>
-                <li class={{step2}}>Owner Details</li>
-                <li class={{step3}}>Finish</li>
-            </ul>
-        </div>
-
-        <div *ngIf="shopform === true" class="shopForm">
-
-            <!-- <h1>Shop Details</h1> -->
-            <form id=addShopform #addShopform="ngForm"
-                (ngSubmit)="addShop(addShopform)">
-                <div class="container">
-
-
-                    <!-- Customer Name -->
-                    <div class="form-group">
-                        <label id="input_label"
-                            for="shop_name">Name:</label>
-                        <input #shop_name="ngModel"
-                            required
-                            type="text" class="form-control"
-                            placeholder="Enter Name"
-                            id="shop_name"
-                            aria-describedby="shop_name"
-                            ngModel
-                            name="shop_name">
-                    </div>
-                    <!-- Customer Name -->
-
-
-                    <!-- Customer Contact -->
-                    <div class="form-group">
-                        <label id="input_label_1"
-                            for="shop_contact">Mobile Number:</label>
-                        <input #shop_contact="ngModel"
-                            pattern=\d\d\d\d\d\d\d\d\d\d
-                            type="text" class="form-control"
-                            id="shop_contact"
-                            aria-describedby="shop_contact"
-                            placeholder="Enter Mobile Number"
-                            ngModel
-                            name="shop_contact">
-                        <span id="input_label"
-                            *ngIf="shop_contact.invalid &&
-                            shop_contact.touched"
-                            style="color:red"><b>**Mobile Number
-                                Should
-                                be
-                                10 digits</b></span>
-                    </div>
-                    <!-- Customer Contact -->
-
-
-
-                    <!-- Customer Email -->
-                    <div class="form-group">
-                        <label id="shop_email" for="shop_email">Email:</label>
-                        <input type="text" class="form-control"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                            id="shop_email" name="shop_email" ngModel
-                            #emailref="ngModel">
-                        <div *ngIf="emailref.errors &&(emailref.touched ||
-                            emailref.dirty)" class="alert alert-danger">
-                            <div [hidden]="!emailref.errors?.pattern">
-                                Invalid pattern
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Customer Email -->
-
-                     <!-- Customer type -->
-
-                     <div class="form-group">
-                        <label id="shop_type"
-                            for="shop_type">Type:</label>
-                        <select #shop_type="ngModel"
-                            required
-                            class="form-control"
-                            id="shop_type"
-                            aria-describedby="shop_type"
-                            ngModel
-                            name="shop_type"><option></option><option
-                                value="Hostel">Hostel</option><option
-                                value="Mess">Mess</option><option
-                                value="Stationary">Stationary</option><option
-                                value="Coffee">Coffee</option><option
-                                value="Glocery">Glocery</option><option
-                                value="Sport">Sport</option></select>
-                    </div>
-                    <!-- Customer type -->
-
-                    <!-- Customer image -->
-                    <div class="form-group">
-                        <label id="shop_image" 
-                            for="shop_image">Upload Image:</label>
-                        <input #shop_image="ngModel"
-                            type="file" class="form-control"
-                            placeholder="Upload Image"
-                            id="shop_image"
-                            accept="images/*"
-                            aria-describedby="shop_image"
-                            ngModel
-                            (change)="handleFileInput($event)"
-                            name="shop_image">
-                    </div>
-                    <!-- Customer image -->_
-
-
-                    <!-- Customer address -->
-                    <div class="form-group">
-                        <label id="shop_addresses"
-                            for="shop_address">Address:</label>
-                        <input #shop_address="ngModel"
-                            required
-                            type="text" class="form-control"
-                            placeholder="Address"
-                            id="shop_address"
-                            aria-describedby="shop_address"
-                            ngModel
-                            name="shop_address">
-                    </div>
-                    <!-- Customer address -->
-                   
-
-                    <!-- Customer description -->
-                    <div class="form-group">
-                        <label id="shop_description"
-                            for="shop_description">Description:</label>
-                        <textarea #shop_image="ngModel"
-                            required
-                            type="textarea" class="form-control"
-                            placeholder="Description"
-                            id="shop_description"
-                            aria-describedby="shop_description"
-                            ngModel
-                            name="shop_description"></textarea>
-                    </div>
-                    <!-- Customer description -->
-
-                    
-
-
-                    <!-- Submit Button -->
-                    <button id="submit_button" type="submit"
-                        class="btn
-                        btn-danger">Next</button>
-                    <!-- Submit Button -->
-                </div>
-            </form>
-        </div>
-
-        <!-- ########################################################################################################################### -->
-        <div *ngIf="ownerform === true" class="shopForm">
-            <form id=addOwnerform #addOwnerform="ngForm"
-                (ngSubmit)="addOwner(addOwnerform)">
-                <div class="container">
-
-
-                    <!-- Customer Name -->
-                    <div class="form-group">
-                        <label id="input_label"
-                            for="owner_name">Owner Name:</label>
-                        <input #owner_name="ngModel"
-                            required
-                            type="text" class="form-control"
-                            placeholder="Enter Name"
-                            id="owner_name"
-                            aria-describedby="owner_name"
-                            ngModel
-                            name="owner_name">
-                    </div>
-                    <!-- Customer Name -->
-
-                    <!-- Customer Contact -->
-                    <!-- Customer Contact -->
-                    <div class="form-group">
-                        <label id="input_label_1"
-                            for="owner_contact">Owner Number:</label>
-                        <input #owner_contact="ngModel"
-                            pattern=\d\d\d\d\d\d\d\d\d\d
-                            type="text" class="form-control"
-                            id="owner_contact"
-                            aria-describedby="owner_contact"
-                            placeholder="Enter Mobile Number"
-                            ngModel
-                            name="owner_contact">
-                    </div>
-                    <!-- Customer Contact -->
-                    <!-- Customer Contact -->
-
-                    <!-- Customer Email -->
-                    <div class="form-group">
-                        <label for="owner_email">Email:</label>
-                        <input type="text" class="form-control"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                            id="owner_email" name="owner_email" ngModel
-                            #emailref="ngModel">
-                        <div *ngIf="emailref.errors &&(emailref.touched ||
-                            emailref.dirty)" class="alert alert-danger">
-                            <div [hidden]="!emailref.errors?.pattern">
-                                Invalid pattern
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Customer Email -->
-
-                    <!-- Customer address -->
-                    <div class="form-group">
-                        <label id="input_label"
-                            for="owner_address">Address:</label>
-                        <input #owner_name="ngModel"
-                            required
-                            type="text" class="form-control"
-                            placeholder="Enter Address"
-                            id="owner_address"
-                            aria-describedby="owner_address"
-                            ngModel
-                            name="owner_address">
-                    </div>
-                    <!-- Customer address -->
-
-                    <!-- Submit Button -->
-                    <button id="submit_button" type="submit"
-                        class="btn
-                        btn-danger">Submit</button>
-                    <!-- Submit Button -->
-                </div>
-            </form>
-        </div>
-
-        <div  *ngIf="successform === true" class="container">
-            <!-- Popup Form -->
-
-            <div data-ng-init="finish()" id="model_popup" class="fancy">
-
-                <!-- Mail Checkmark -->
-                <div style="position:relative;bottom:0px;margin-left:0px;"
-                    *ngIf="successform === true">
-                    <div class="swal2-icon swal2-success
-                        swal2-animate-success-icon"
-                        style="display: flex;">
-                        <span class="swal2-success-line-tip"></span>
-                        <span class="swal2-success-line-long"></span>
-                        <div class="swal2-success-ring"></div>
-                    </div>
-                </div>
-                <!-- Mail Checkmark -->
-
-                <div style="text-align:center;color: black;">
-                    <h2>Thank You!</h2>
-                    <h5>Registered Successfully</h5>
-                </div>
-
-
-
+        <body>
+            <div class="container">
+                <ul class="progressbar">
+                    <li class={{step1}}>Shop Details</li>
+                    <li class={{step2}}>Owner Details</li>
+                    <li class={{step3}}>Finish</li>
+                </ul>
             </div>
 
+            <div *ngIf="shopform === true" class="shopForm">
 
-            <!-- Popup Form -->
-        </div>
+                <!-- <h1>Shop Details</h1> -->
+                <form id=addShopform #addShopform="ngForm"
+                    (ngSubmit)="addShop(addShopform)">
+                    <div class="container">
 
-    </body>
-</html>
+
+                        <!-- Shop Name -->
+                        <div class="form-group">
+                            <label id="input_label"
+                                for="shop_name">Name:</label>
+                            <input #shop_name="ngModel"
+                                required
+                                type="text" class="form-control"
+                                placeholder="Enter Name"
+                                id="shop_name"
+                                aria-describedby="shop_name"
+                                ngModel
+                                name="shop_name">
+                        </div>
+                        <!-- Shop Name -->
+
+
+                        <!-- Shop Contact -->
+                        <div class="form-group">
+                            <label id="input_label_1"
+                                for="shop_contact">Mobile Number:</label>
+                            <input #shop_contact="ngModel"
+                                pattern=\d\d\d\d\d\d\d\d\d\d
+                                type="text" class="form-control"
+                                id="shop_contact"
+                                aria-describedby="shop_contact"
+                                placeholder="Enter Mobile Number"
+                                ngModel
+                                name="shop_contact">
+                            <span id="input_label"
+                                *ngIf="shop_contact.invalid &&
+                                shop_contact.touched"
+                                style="color:red"><b>**Mobile Number
+                                    Should
+                                    be
+                                    10 digits</b></span>
+                        </div>
+                        <!-- Shop Contact -->
+
+
+
+                        <!-- Shop Email -->
+                        <div class="form-group">
+                            <label id="shop_email" for="shop_email">Email:</label>
+                            <input type="text" class="form-control"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                id="shop_email" name="shop_email" ngModel
+                                #emailref="ngModel">
+                            <div *ngIf="emailref.errors &&(emailref.touched ||
+                                emailref.dirty)" class="alert alert-danger">
+                                <div [hidden]="!emailref.errors?.pattern">
+                                    Invalid pattern
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Shop Email -->
+
+                        <!-- Shop type -->
+
+                        <div class="form-group">
+                            <label id="shop_type"
+                                for="shop_type">Type:</label>
+                            <select #shop_type="ngModel"
+                                required
+                                class="form-control"
+                                id="shop_type"
+                                aria-describedby="shop_type"
+                                ngModel
+                                name="shop_type"><option></option><option
+                                    value="Hostel">Hostel</option><option
+                                    value="Mess">Mess</option><option
+                                    value="Stationary">Stationary</option><option
+                                    value="Coffee">Coffee</option><option
+                                    value="Glocery">Glocery</option><option
+                                    value="Sport">Sport</option></select>
+                        </div>
+                        <!-- Shop type -->
+
+                        <!-- Shop image -->
+                        <div class="form-group">
+                            <label id="shop_image"
+                                for="shop_image">Upload Image:</label>
+                            <input #shop_image="ngModel"
+                                type="file" class="form-control"
+                                placeholder="Upload Image"
+                                id="shop_image"
+                                accept="images/*"
+                                aria-describedby="shop_image"
+                                ngModel
+                                (change)="handleFileInput($event)"
+                                name="shop_image">
+                        </div>
+                        <!-- Shop image -->_
+
+
+                        <!-- Shop address -->
+                        <div class="form-group">
+                            <label id="shop_addresses"
+                                for="shop_address">Address:</label>
+                            <input #shop_address="ngModel"
+                                required
+                                type="text" class="form-control"
+                                placeholder="Address"
+                                id="shop_address"
+                                aria-describedby="shop_address"
+                                ngModel
+                                name="shop_address">
+                        </div>
+                        <!-- Shop address -->
+
+
+                        <!-- Shop description -->
+                        <div class="form-group">
+                            <label id="shop_description"
+                                for="shop_description">Description:</label>
+                            <textarea #shop_image="ngModel"
+                                required
+                                type="textarea" class="form-control"
+                                placeholder="Description"
+                                id="shop_description"
+                                aria-describedby="shop_description"
+                                ngModel
+                                name="shop_description"></textarea>
+                        </div>
+                        <!-- Shop description -->
+
+                        <!-- Submit Button -->
+                        <button id="submit_button" type="submit"
+                            class="btn
+                            btn-danger">Next</button>
+                        <!-- Submit Button -->
+                    </div>
+                </form>
+            </div>
+
+            <!-- ########################################################################################################################### -->
+            <div *ngIf="ownerform === true" class="shopForm">
+                <form id=addOwnerform #addOwnerform="ngForm"
+                    (ngSubmit)="addOwner(addOwnerform)">
+                    <div class="container">
+
+                        <!-- Owner Name -->
+                        <div class="form-group">
+                            <label id="input_label"
+                                for="owner_name">Owner Name:</label>
+                            <input #owner_name="ngModel"
+                                required
+                                type="text" class="form-control"
+                                placeholder="Enter Name"
+                                id="owner_name"
+                                aria-describedby="owner_name"
+                                ngModel
+                                name="owner_name">
+                        </div>
+                        <!-- Owner Name -->
+
+                        <!-- Owner Contact -->
+                        <div class="form-group">
+                            <label id="input_label_1"
+                                for="owner_contact">Owner Number:</label>
+                            <input #owner_contact="ngModel"
+                                pattern=\d\d\d\d\d\d\d\d\d\d
+                                type="text" class="form-control"
+                                id="owner_contact"
+                                aria-describedby="owner_contact"
+                                placeholder="Enter Mobile Number"
+                                ngModel
+                                name="owner_contact">
+                        </div>
+                        <!-- Owner Contact -->
+
+                        <!-- Owner Email -->
+                        <div class="form-group">
+                            <label for="owner_email">Email:</label>
+                            <input type="text" class="form-control"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                id="owner_email" name="owner_email" ngModel
+                                #emailref="ngModel">
+                            <div *ngIf="emailref.errors &&(emailref.touched ||
+                                emailref.dirty)" class="alert alert-danger">
+                                <div [hidden]="!emailref.errors?.pattern">
+                                    Invalid pattern
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Owner Email -->
+
+                        <!-- Owner address -->
+                        <div class="form-group">
+                            <label id="input_label"
+                                for="owner_address">Address:</label>
+                            <input #owner_name="ngModel"
+                                required
+                                type="text" class="form-control"
+                                placeholder="Enter Address"
+                                id="owner_address"
+                                aria-describedby="owner_address"
+                                ngModel
+                                name="owner_address">
+                        </div>
+                        <!-- Owner address -->
+
+                        <!-- Submit Button -->
+                        <button id="owner_submit_button" type="submit"
+                            class="btn
+                            btn-danger">Submit</button>
+                        <!-- Submit Button -->
+                    </div>
+                </form>
+            </div>
+
+            <div *ngIf="successform === true" class="container">
+                <!-- Popup Form -->
+
+                <div data-ng-init="finish()" id="model_popup" class="fancy">
+                    <!-- Mail Checkmark -->
+                    <div style="position:relative;bottom:0px;margin-left:0px;"
+                        *ngIf="successform === true">
+                        <div class="swal2-icon swal2-success
+                            swal2-animate-success-icon"
+                            style="display: flex;">
+                            <span class="swal2-success-line-tip"></span>
+                            <span class="swal2-success-line-long"></span>
+                            <div class="swal2-success-ring"></div>
+                        </div>
+                    </div>
+                    <!-- Mail Checkmark -->
+
+                    <div style="text-align:center;color: black;">
+                        <h2>Thank You!</h2>
+                        <h5>Registered Successfully</h5>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- Popup Form -->
+            </div>
+
+        </body>
+    </html>
 
 </div>

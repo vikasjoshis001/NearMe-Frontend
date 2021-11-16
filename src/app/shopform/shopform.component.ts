@@ -68,10 +68,11 @@ export class ShopformComponent implements OnInit {
     return this.http.post("http://127.0.0.1:8000/shop/", fd).subscribe((result) => {
       this.out = result;
       console.log("OUTPUT is : ", this.out)
+      this.step3 = "active"
     })
   }
 
-  finish(){
+  finish() {
     console.log("finish")
     this.step3 = "active"
   }
