@@ -1,31 +1,33 @@
-<div class="container">
-  <br>
-  <h2 style="text-align: center;"><b><i>{{ shoptype|titlecase }}</i></b></h2>
-  <div class="form-group">
-    <input type="text" class="form-control" [(ngModel)]="text"
-      placeholder="Search Here">
-  </div>
-  <div *ngFor="let shops of shopList |filter:text">
-    <div class="row no-gutters bg-light position-relative">
-      <div class="col-md-6 mb-md-0 p-md-4">
-        <img style="border:solid;padding:20px;" width=100px height=200px
-          [src]="shops.shop_image" class="w-100"
-          [alt]="shops.shop_image">
-      </div>
-      <div class="col-md-6 position-static p-4 pl-md-0">
-        <h5 class="mt-0"><b>{{ shops.shop_name|titlecase }}</b></h5>
-        <p>
-          Name : {{ shops.shop_name|titlecase }} <br>
-          Address : {{ shops.shop_address|titlecase }} <br>
-          Contact : {{ shops.shop_contact|titlecase }} <br>
-          Email : {{ shops.shop_email|titlecase }} <br>
-          Description : {{ shops.shop_description }} <br>
-        </p>
-        <a class="stretched-link">More Info</a>
-      </div>
+<body>
+  <div class="container">
+    <br>
+    <h2 style="text-align: center;color:white"><b><i>{{ shoptype|titlecase }}</i></b></h2>
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="text"
+        placeholder="Search Here">
     </div>
-
+    <div *ngFor="let shops of shopList |filter:text">
+      <div class="row no-gutters position-relative">
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img style="border:solid white;padding:20px;" width=100px height=200px
+            [src]="shops.shop_image" class="w-100"
+            [alt]="shops.shop_image">
+        </div>
+        <div class="col-md-6 position-static p-4 pl-md-0">
+          <h5 style="color:white" class="mt-0"><b>{{ shops.shop_name|titlecase }}</b></h5>
+          <p style="color:white">
+            Name : {{ shops.shop_name|titlecase }} <br>
+            Address : {{ shops.shop_address|titlecase }} <br>
+            Contact : {{ shops.shop_contact|titlecase }} <br>
+            Email : {{ shops.shop_email|titlecase }} <br>
+            Description : {{ shops.shop_description }} <br>
+          </p>
+          <a href="/more/{{shops.shop_id}}" class="stretched-link">More Info</a>
+        </div>
+      </div>
+  
+    </div>
   </div>
-</div>
-
-<router-outlet></router-outlet>
+  
+  <router-outlet></router-outlet>
+</body>

@@ -1,0 +1,51 @@
+<body>
+    <div style="border: 5px solid white;" class="container">
+        <br>
+        <!-- <h2 style="text-align: center;"><b><i>{{ shoptype|titlecase }}</i></b></h2> -->
+        <!-- <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="text"
+            placeholder="Search Here">
+        </div> -->
+        <div *ngFor="let shops of shopList |filter:text">
+            <div class="row no-gutters bg-blue position-relative">
+                <div class="col-md-6 mb-md-0 p-md-4">
+                    <img width=300px height=200px
+                        [src]="shops.shop_image"
+                        [alt]="shops.shop_image">
+                </div>
+                <div class="col-md-6 position-static p-4 pl-md-0">
+                    <h1 style="color:white" class="mt-0"><b>{{ shops.shop_name|titlecase }}</b></h1>
+                    <h5 style="color:white">
+                        <!-- Name : {{ shops.shop_name|titlecase }} <br> -->
+                        {{ shops.shop_address|titlecase }} <br>
+                        <!-- Contact : {{ shops.shop_contact|titlecase }} <br> -->
+                        <!-- Email : {{ shops.shop_email|titlecase }} <br> -->
+                        <!-- Description : {{ shops.shop_description }} <br> -->
+                    </h5>
+                    <!-- <a href="/moreinfo/{{shops.shop_id}}" class="stretched-link">More Info</a> -->
+                </div>
+                <hr class="new4">
+            </div>
+            <h3 style="text-align: center;color:white">Shop Details</h3>
+            <p style="color:white">
+                <b>Name :</b> {{ shops.shop_name|titlecase }} <br><br>
+                <b>Address :</b> {{ shops.shop_address|titlecase }} <br><br>
+                <b>Contact :</b> {{ shops.shop_contact|titlecase }} <br><br>
+                <b>Email :</b> {{ shops.shop_email }} <br><br>
+                <b>Description :</b> {{ shops.shop_description }} <br><br>
+            </p>
+            <hr class="new4">
+            <h3 style="text-align: center;color:white">Owner Details</h3>
+            <p style="color:white">
+                <b>Name :</b> {{ shops.owner_name|titlecase }} <br><br>
+                <b>Address :</b> {{ shops.owner_address|titlecase }} <br><br>
+                <b>Contact :</b> {{ shops.owner_contact|titlecase }} <br><br>
+                <b>Email :</b> {{ shops.owner_email }} <br><br>
+                <!-- <b>Description :</b> {{ shops.shop_description }} <br><br> -->
+            </p>
+
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+</body>

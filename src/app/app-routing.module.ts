@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ShopformComponent } from './shopform/shopform.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExploreComponent } from './explore/explore.component';
+import { MoreinfoComponent } from './moreinfo/moreinfo.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "explore/:shoptype",
     component: ExploreComponent
+  },
+  {
+    path: "more/:shopid",
+    component: MoreinfoComponent
   },
 ];
 

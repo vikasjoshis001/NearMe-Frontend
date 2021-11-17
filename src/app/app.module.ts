@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExploreComponent } from './explore/explore.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MoreinfoComponent } from './moreinfo/moreinfo.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     ContactComponent,
     ExploreComponent,
+    MoreinfoComponent,
   ],
   imports: [
     BrowserModule,
