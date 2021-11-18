@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit {
 
   contactUs(data){
     console.log(data.value);
-    return this.http.post("http://127.0.0.1:8000/contact/", data.value).subscribe((result) => {
+    return this.http.post(environment.url+"contact/", data.value).subscribe((result) => {
       this.out = result;
       console.log("OUTPUT is : ", this.out)
       this.contactform = false;

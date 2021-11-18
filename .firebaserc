@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "nearest-me": {
+      "hosting": {
+        "nearme-frontend": [
+          "nearest-me"
+        ]
+      }
+    }
+  }
+}

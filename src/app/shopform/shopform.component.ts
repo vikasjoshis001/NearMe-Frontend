@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-shopform',
@@ -65,7 +66,7 @@ export class ShopformComponent implements OnInit {
     this.successform = true;
 
     this.step2 = "active"
-    return this.http.post("http://127.0.0.1:8000/shop/", fd).subscribe((result) => {
+    return this.http.post(environment.url+"shop/", fd).subscribe((result) => {
       this.out = result;
       console.log("OUTPUT is : ", this.out)
       this.step3 = "active"
