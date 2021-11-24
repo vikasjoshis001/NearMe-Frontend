@@ -21,9 +21,9 @@ export class ExploreComponent implements OnInit, OnDestroy {
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
   getShops(data) {
+    console.log(environment.url+"getshops/?type=")
     return this.http.get(environment.url+"getshops/?type=" + data).subscribe((result) => {
       console.log("ShopList Fetched Successfully....")
-      console.log(environment.url+"getshops/?type=")
       this.shopList = result;
       this.shopList = this.shopList.data;
       console.log(this.shopList)

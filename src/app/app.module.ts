@@ -16,6 +16,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ExploreComponent } from './explore/explore.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoreinfoComponent } from './moreinfo/moreinfo.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { MoreinfoComponent } from './moreinfo/moreinfo.component';
     ContactComponent,
     ExploreComponent,
     MoreinfoComponent,
+    SignupComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,
