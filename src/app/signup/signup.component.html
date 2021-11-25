@@ -1,1 +1,89 @@
-<p>signup works!</p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+    </head>
+    <body>
+        
+            <form id=SignupForm #contactForm="ngForm" >
+                <div class="container">
+	    
+                    <div class="col-md-10 col-md-offset-1 main" >
+                        
+                            
+                            <div class="col-md-6 right-side">
+                            <h3>SignUp</h3>
+                    
+                    
+            <!--Form with header-->
+            <div class="form">
+            
+            
+                    <div class="form-group">
+                        <label for="name">usersname</label>
+                            <input #Username="ngModel" ngModel aria-describedby="name"
+                              type="text" class="form-control input-lg"
+                              id="name" 
+                              name="name">
+                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Mobile No</label>
+                            <input #Username="ngModel" ngModel aria-describedby="contact"
+                              type="text" class="form-control input-lg"
+                              id="contact" 
+                              name="contact">
+                        
+                    </div>   
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                            <input #Username="ngModel" ngModel aria-describedby="email"
+                              type="text" class="form-control input-lg"
+                              id="email" 
+                              name="email">
+                        
+                    </div>  
+
+                    <div class="form-group">
+                        <label for="password">Your Password</label>
+                        <input #Password="ngModel" ngModel aria-describedby="password"
+                        type="password" id="password" 
+                        class="form-control input-lg"
+                        name="password">
+                       
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input #Password="ngModel" ngModel aria-describedby="confirm_password"
+                        type="confirm_password" id="confirm_password" 
+                        class="form-control input-lg"
+                        name="confirm_password">
+                        </div>
+
+                    <div class="text-xs-center">
+                        <button class="btn btn-deep-purple">Login</button>
+                    </div>
+            
+            
+            </div>
+            <!--/Form with header-->
+            
+                   
+                    </div>
+                    
+                    </div><!--col-sm-8-->
+                    
+                    </div><!--container-->
+        </form>
+        
+        
+    </body>
+</html>
+
+
