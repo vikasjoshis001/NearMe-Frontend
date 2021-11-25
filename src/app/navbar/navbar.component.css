@@ -25,10 +25,24 @@
 .signin{
   background-color: aqua;
   padding: 10px 20px;
-  border-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .signin:hover{
   background-color: rgb(209, 212, 0);
   padding: 10px 20px;
-  border-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.signup{
+  background-color: aqua;
+  padding: 10px 20px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.signup:hover{
+  background-color: rgb(209, 212, 0);
+  padding: 10px 20px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
 }
