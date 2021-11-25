@@ -16,9 +16,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ExploreComponent } from './explore/explore.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoreinfoComponent } from './moreinfo/moreinfo.component';
-import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
-
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,8 @@ import { SigninComponent } from './signin/signin.component';
     ContactComponent,
     ExploreComponent,
     MoreinfoComponent,
-    SignupComponent,
     SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

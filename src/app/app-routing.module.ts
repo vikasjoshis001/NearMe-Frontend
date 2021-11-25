@@ -6,6 +6,8 @@ import { ShopformComponent } from './shopform/shopform.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExploreComponent } from './explore/explore.component';
 import { MoreinfoComponent } from './moreinfo/moreinfo.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: "more/:shopid",
     component: MoreinfoComponent
+  },
+  {
+    path: "signin",
+    component: SigninComponent
+  },
+  {
+    path: "signup",
+    component: SignupComponent
   },
 ];
 
