@@ -227,7 +227,9 @@ html {
 .right{
 position: absolute;
   width: 20%;
-  background-color: rgb(2, 247, 255);
+  background-image: url('src/assets/img/right.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 155vh;
   margin-top: 0px;
   
